@@ -1,4 +1,4 @@
-const orderPieces = 4;
+let inputUser = prompt(`Какое количество дроидов вы хотите купить`);
 
 const credits = 23580;
 const pricePerDroid = 3000;
@@ -9,12 +9,12 @@ let totalPrice; // Write code on this line
 let balanceCredit; // Write code on this line
 let message;
 
-if (orderPieces === null) {
+if (inputUser === null) {
   message = CANCELED_BY_USER;
-} else if (orderPieces <= 7) {
-  totalPrice = pricePerDroid * orderPieces;
+} else if (inputUser <= 7) {
+  totalPrice = pricePerDroid * inputUser;
   balanceCredit = credits - totalPrice;
-  message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов`;
+  message = `Вы купили ${inputUser} дроидов, на счету осталось ${balanceCredit} кредитов`;
 } else {
   message = ACCESS_DENIED;
 }
